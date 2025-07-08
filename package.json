@@ -1,6 +1,6 @@
 {
-  "name": "@dad-of-code/kt-helpers",
-  "version": "1.0.0",
+  "name": "@dadofcode/kt-helpers",
+  "version": "1.0.2",
   "description": "Collection of helper utilities for KTUI including alerts and form helpers",
   "main": "dist/kt-alerts.js",
   "module": "src/index.js",
@@ -27,12 +27,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dad-of-code/kt-alerts.git"
+    "url": "git+https://github.com/dad-of-code/kt-helpers.git"
   },
   "bugs": {
-    "url": "https://github.com/dad-of-code/kt-alerts/issues"
+    "url": "https://github.com/dad-of-code/kt-helpers/issues"
   },
-  "homepage": "https://github.com/dad-of-code/kt-alerts#readme",
+  "homepage": "https://github.com/dad-of-code/kt-helpers#readme",
   "devDependencies": {
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
@@ -43,5 +43,8 @@
   },
   "peerDependencies": {
     "@keenthemes/ktui": "^1.0.19"
+  },
+  "directories": {
+    "example": "examples"
   }
 }
