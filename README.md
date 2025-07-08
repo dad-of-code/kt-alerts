@@ -1,6 +1,12 @@
-# Alerts Helper
+# @dad-of-code/kt-helpers
 
-This module provides a simple, consistent interface for displaying modal alerts and confirmations in the IHHUB application using KTUI (KeenThemes UI).
+A collection of helper utilities for KTUI including alerts and form helpers.
+
+## Installation
+
+```bash
+npm install @dad-of-code/kt-helpers
+```
 
 ## Overview
 
@@ -14,11 +20,13 @@ All dialogs are built on top of KTUI's modal component and styled according to K
 
 ## Usage
 
+### Basic Usage
+
 ```javascript
-import Alerts from 'core/system/helpers/alerts';
+import Alerts from '@dad-of-code/kt-helpers';
 
 // Simple success alert
-Alerts.fire('Success', 'Operation completed successfully', 'success');
+Alerts.show('Success', 'Operation completed successfully', 'success');
 
 // Confirmation dialog
 Alerts.confirm('Confirm Action', 'Are you sure you want to proceed?', 'warning')
@@ -32,6 +40,82 @@ Alerts.confirm('Confirm Action', 'Are you sure you want to proceed?', 'warning')
 
 // Error alert
 Alerts.error('Error', 'Something went wrong', 'error');
+
+// Delete confirmation
+Alerts.delete('Delete Item', 'Are you sure you want to delete this item?')
+  .then(result => {
+    if (result) {
+      // User clicked "Delete"
+    }
+  });
+```
+
+### Global Configuration
+
+You can set global configuration options that will apply to all alerts:
+
+```javascript
+Alerts.setConfig({
+  styles: {
+    // Override existing styles
+    success: {
+      backgroundClass: 'bg-emerald-100',
+      foregroundClass: 'text-emerald-800',
+      iconClass: 'ki-filled ki-check-circle text-emerald-600 text-3xl',
+      borderClass: 'border-emerald-200'
+    },
+    // Add custom types
+    custom: {
+      backgroundClass: 'bg-purple-100',
+      foregroundClass: 'text-purple-800',
+      iconClass: 'ki-filled ki-star text-purple-600 text-3xl',
+      borderClass: 'border-purple-200'
+    }
+  },
+  // Change the default type
+  defaultType: 'info'
+});
+```
+
+### Per-Alert Customization
+
+You can customize individual alerts by passing custom styles:
+
+```javascript
+Alerts.show(
+  'Custom Styled Alert', 
+  'This alert has custom styling just for this instance', 
+  'info', 
+  {
+    backgroundClass: 'bg-amber-100',
+    foregroundClass: 'text-amber-800',
+    iconClass: 'ki-filled ki-notification text-amber-600 text-3xl',
+    borderClass: 'border-amber-200'
+  }
+);
+```
+
+### Advanced Usage with fire()
+
+For maximum flexibility, use the `fire()` method with a configuration object:
+
+```javascript
+Alerts.fire({
+  title: 'Custom Alert',
+  message: 'This is a fully customized alert',
+  type: 'custom', // Can be any type defined in your config
+  buttons: [
+    { text: 'Cancel', className: 'kt-btn kt-btn-light', value: false, dismiss: true },
+    { text: 'Continue', className: 'kt-btn kt-btn-primary', value: true, dismiss: true },
+    { text: 'Help', className: 'kt-btn kt-btn-info', value: 'help', dismiss: false }
+  ],
+  customStyles: {
+    // Override just the icon for this specific alert
+    iconClass: 'ki-filled ki-rocket text-purple-600 text-3xl'
+  }
+}).then(result => {
+  console.log('User selected:', result);
+});
 ```
 
 ## Alert Types

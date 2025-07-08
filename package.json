@@ -1,0 +1,47 @@
+{
+  "name": "@dad-of-code/kt-helpers",
+  "version": "1.0.0",
+  "description": "Collection of helper utilities for KTUI including alerts and form helpers",
+  "main": "dist/kt-alerts.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "alerts",
+    "modal",
+    "ktui",
+    "notifications",
+    "dialog",
+    "form",
+    "helpers",
+    "utilities"
+  ],
+  "author": "dad-of-code",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dad-of-code/kt-alerts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dad-of-code/kt-alerts/issues"
+  },
+  "homepage": "https://github.com/dad-of-code/kt-alerts#readme",
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "terser-webpack-plugin": "^5.3.9"
+  },
+  "peerDependencies": {
+    "@keenthemes/ktui": "^1.0.19"
+  }
+}
