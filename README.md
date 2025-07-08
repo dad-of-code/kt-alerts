@@ -77,24 +77,6 @@ Alerts.setConfig({
 });
 ```
 
-### Per-Alert Customization
-
-You can customize individual alerts by passing custom styles:
-
-```javascript
-Alerts.show(
-  'Custom Styled Alert', 
-  'This alert has custom styling just for this instance', 
-  'info', 
-  {
-    backgroundClass: 'bg-amber-100',
-    foregroundClass: 'text-amber-800',
-    iconClass: 'ki-filled ki-notification text-amber-600 text-3xl',
-    borderClass: 'border-amber-200'
-  }
-);
-```
-
 ### Advanced Usage with fire()
 
 For maximum flexibility, use the `fire()` method with a configuration object:
