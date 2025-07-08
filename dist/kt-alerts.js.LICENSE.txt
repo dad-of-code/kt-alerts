@@ -1,0 +1,8 @@
+/**
+ * Alerts - A simple, consistent interface for displaying modal alerts and confirmations
+ * @module Alerts
+ * 
+ * @version v1.0.1
+ * @author dad-of-code
+ * @license MIT
+ */
