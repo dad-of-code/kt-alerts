@@ -2,6 +2,16 @@
 
 A collection of helper utilities for KTUI including alerts and form helpers.
 
+## KTUI & KeenThemes Integration
+
+This module is built on top of [KTUI](https://github.com/keenthemes/ktui), a modern UI framework by KeenThemes. It leverages KTUI's modal component and styling classes to create consistent, responsive alert dialogs.
+
+The alerts are styled using KTUI's utility classes for colors, spacing, and typography, ensuring they match the overall design system of the application.
+
+Icons are provided by [KeenIcons](https://keenthemes.com/keenicons) and are used to enhance the visual appeal of the alerts.
+
+The module is peer-dependant on KTUI and intended to be used with Metronic 9 [Metronic](https://keenthemes.com/metronic/).
+
 ## Installation
 
 ```bash
