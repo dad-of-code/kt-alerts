@@ -5,7 +5,7 @@ A collection of helper utilities for KTUI including alerts and form helpers.
 ## Installation
 
 ```bash
-npm install @dad-of-code/kt-helpers
+npm install @dadofcode/kt-helpers
 ```
 
 ## Overview
@@ -23,7 +23,7 @@ All dialogs are built on top of KTUI's modal component and styled according to K
 ### Basic Usage
 
 ```javascript
-import Alerts from '@dad-of-code/kt-helpers';
+import Alerts from '@dadofcode/kt-helpers';
 
 // Simple success alert
 Alerts.show('Success', 'Operation completed successfully', 'success');
